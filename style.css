@@ -1,0 +1,156 @@
+/* Estilo global y reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0e0e0e;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    background-image: url('img/hacker-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 2%;
+}
+
+.encriptar, .encriptado {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.texto, .texto-encriptado {
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+    color: #0f0;
+    border: 1px solid #0a3871;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+}
+
+.texto-encriptado[readonly] {
+    cursor: not-allowed;
+}
+
+.imagen-encriptado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+    display: block;
+    z-index: 1;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.terminos {
+    margin-top: 10px;
+    text-align: center;
+    color: #bbb;
+}
+
+.botones, .copiar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0a3871;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:disabled {
+    background-color: #333;
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background-color: #0f0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0a3871;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsivo para tabletas y dispositivos móviles */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 5%;
+    }
+
+    .encriptar, .encriptado {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .texto, .texto-encriptado {
+        height: 250px;
+    }
+}
+
+/* Responsivo para móviles pequeños */
+@media (max-width: 480px) {
+    .encriptar, .encriptado {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .texto, .texto-encriptado {
+        height: 200px;
+    }
+
+    .botones, .copiar {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+
+
+

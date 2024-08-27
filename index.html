@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador y Desencriptador de Texto</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sección de entrada de texto y selección de acción -->
+        <div class="encriptar">
+            <textarea id="input-text" class="texto" placeholder="Ingresa tu texto aquí"></textarea>
+            <p class="note">Solo letras minúsculas y sin acentos.</p>
+            <div class="botones">
+                <button id="encrypt-btn">Encriptar</button>
+                <button id="decrypt-btn">Desencriptar</button>
+            </div>
+        </div>
+
+        <!-- Sección de resultado y botón de copiar -->
+        <div class="encriptado">
+            <textarea id="output-text" class="texto-encriptado" readonly placeholder="El resultado aparecerá aquí"></textarea>
+            <img src="img/muñeco.png" alt="Imagen Encriptado" id="imagen-encriptado" class="imagen-encriptado" />
+            <div class="copiar">
+                <button id="copy-btn" disabled>Copiar</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Creado por Roberto Morales Morales, &copy; 2024
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
